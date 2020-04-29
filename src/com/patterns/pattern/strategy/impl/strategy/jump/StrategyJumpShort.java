@@ -1,4 +1,4 @@
-package com.patterns.strategy.impl.strategy.jump;
+package com.patterns.pattern.strategy.impl.strategy.jump;
 
 import static java.lang.System.out;
 

@@ -1,4 +1,4 @@
-package com.patterns.strategy.impl.strategy.display;
+package com.patterns.pattern.strategy.impl.strategy.display;
 
 import static java.lang.System.out;
 

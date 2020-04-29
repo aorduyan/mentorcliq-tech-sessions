@@ -1,4 +1,4 @@
-package com.patterns.strategy.impl.strategy.move;
+package com.patterns.pattern.strategy.impl.strategy.move;
 
 public interface StrategyMove {
 

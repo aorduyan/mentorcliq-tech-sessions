@@ -1,6 +1,6 @@
 package com.patterns;
 
-import com.patterns.strategy.StrategyRunner;
+import com.patterns.pattern.strategy.StrategyRunner;
 
 public class Main {
 

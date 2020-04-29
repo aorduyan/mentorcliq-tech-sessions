@@ -1,9 +1,9 @@
-package com.patterns.strategy.impl;
+package com.patterns.pattern.strategy.impl;
 
-import com.patterns.strategy.impl.strategy.attack.StrategyAttack;
-import com.patterns.strategy.impl.strategy.display.StrategyDisplay;
-import com.patterns.strategy.impl.strategy.jump.StrategyJump;
-import com.patterns.strategy.impl.strategy.move.StrategyMove;
+import com.patterns.pattern.strategy.impl.strategy.attack.StrategyAttack;
+import com.patterns.pattern.strategy.impl.strategy.display.StrategyDisplay;
+import com.patterns.pattern.strategy.impl.strategy.jump.StrategyJump;
+import com.patterns.pattern.strategy.impl.strategy.move.StrategyMove;
 
 public class Mario {
 

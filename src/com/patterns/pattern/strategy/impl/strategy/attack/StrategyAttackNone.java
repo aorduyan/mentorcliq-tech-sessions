@@ -1,4 +1,4 @@
-package com.patterns.strategy.impl.strategy.attack;
+package com.patterns.pattern.strategy.impl.strategy.attack;
 
 import static java.lang.System.out;
 
