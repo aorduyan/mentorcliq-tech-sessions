@@ -5,10 +5,12 @@ import com.patterns.pattern.strategy.impl.strategy.attack.StrategyAttackNone;
 import com.patterns.pattern.strategy.impl.strategy.display.StrategyDisplayBig;
 import com.patterns.pattern.strategy.impl.strategy.jump.StrategyJumpShort;
 import com.patterns.pattern.strategy.impl.strategy.move.StrategyMoveRun;
+import com.patterns.run.PatternRunner;
 
-public class StrategyRunner {
+public class StrategyRunner implements PatternRunner {
 
-    public static void run() {
+    @Override
+    public void run() {
         Mario mario = new Mario(new StrategyDisplayBig(), new StrategyAttackNone(), new StrategyMoveRun(), new StrategyJumpShort());
         mario.display();
         mario.attack();
