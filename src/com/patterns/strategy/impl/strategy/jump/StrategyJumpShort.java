@@ -2,10 +2,10 @@ package com.patterns.strategy.impl.strategy.jump;
 
 import static java.lang.System.out;
 
-public class OperationJumpLong implements StrategyJump {
+public class StrategyJumpShort implements StrategyJump {
 
     @Override
     public void doOperation() {
-        out.println("Jump Long");
+        out.println("Jump Short");
     }
 }
