@@ -1,11 +1,13 @@
 package com.patterns;
 
-import com.patterns.pattern.strategy.StrategyRunner;
+import com.patterns.run.Pattern;
+
+import static com.patterns.run.PatternRunnerFactory.createPatternRunner;
 
 public class Main {
 
     public static void main(String[] args) {
-        StrategyRunner.run();
+        createPatternRunner(Pattern.ADAPTER).run();
     }
 
 }
