@@ -1,4 +1,4 @@
-package com.patterns.pattern.adapter.mail.google;
+package com.patterns.pattern.adapter.mail.adapter;
 
 import com.patterns.pattern.adapter.mail.exchange.ExchangeMailServer;
 import com.patterns.pattern.adapter.mail.google.GoogleMailServer;
@@ -7,11 +7,11 @@ import com.patterns.pattern.adapter.mail.google.GoogleMailToSend;
 import java.util.Map;
 import java.util.Set;
 
-public class GoogleMailServerAdapter implements ExchangeMailServer {
+public class GoogleExchangeMailServerAdapter implements ExchangeMailServer {
 
     private GoogleMailServer googleMailServer;
 
-    public GoogleMailServerAdapter(GoogleMailServer googleMailServer) {
+    public GoogleExchangeMailServerAdapter(GoogleMailServer googleMailServer) {
         this.googleMailServer = googleMailServer;
     }
 
@@ -30,7 +30,7 @@ public class GoogleMailServerAdapter implements ExchangeMailServer {
 
     @Override
     public void sendEmail(String recipientEmailAddress, String title, String body) {
-        GoogleMailToSend googleMailToSend = new GoogleMailToSend(recipientEmailAddress, title, body);
+        GoogleMailToSend googleMailToSend = googleMailServer.composeEmail(recipientEmailAddress, title, body);
         googleMailServer.sendEmail(googleMailToSend);
     }
 }
