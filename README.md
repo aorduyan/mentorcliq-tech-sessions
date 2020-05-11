@@ -1,1 +1,1 @@
-# mentorcliq-tech-sessions
+# mentorcliq tech sessions
