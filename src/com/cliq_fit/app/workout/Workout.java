@@ -4,7 +4,7 @@ import com.cliq_fit.app.workout.stage.exercise.ExerciseStage;
 import com.cliq_fit.app.workout.stage.stretch.StretchStage;
 import com.cliq_fit.app.workout.stage.warmup.WarmUpStage;
 
-public class Workout {
+class Workout {
 
     private WarmUpStage warmUpStage;
     private ExerciseStage exerciseStage;
