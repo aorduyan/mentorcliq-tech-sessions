@@ -9,7 +9,7 @@ User preference (boxing, swimming, running)
 
 The program needs to provide a set of different workouts. (strategy patter)
 Every workout has different stages: prepare, exercise, stretching.
-Each workout has its unique way of doing all the stages. For example swimming workout: prepare (shoulder and legs round movement), exercise (swim in a pool), stretching (relax in a Jacuzzi). Running working: prepare (walk 5 min), exercise (run for 30 min), stretching (relax your legs)
+Each workout has its unique way of doing all the stages. For example swimming workout: prepare (shoulder and legs round movement), exercise (swim in a pool), stretching (relax in a Jacuzzi). Running working: prepare (walk 5 min), exercise (run for 30 min), stretching (relax your legs). The program can build its own workout plan (different combination of stages).
 
 The program can record the logs and also can work with different apps like google fit, strava, nike club (adapter pattern)
 The program can have, avgTimeByYear, shareYourResult,... functionality
