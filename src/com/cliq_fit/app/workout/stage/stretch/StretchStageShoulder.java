@@ -4,6 +4,6 @@ public class StretchStageShoulder implements StretchStage {
 
     @Override
     public void doOperation() {
-        System.out.println("I am doing shoulder round movement");
+        System.out.println("I am doing shoulder stretching");
     }
 }
