@@ -4,10 +4,16 @@ import com.cliq_fit.app.configuration.FitConfig;
 import com.cliq_fit.app.report.CliqFitReport;
 import com.cliq_fit.app.report.CliqFitReportClient;
 import com.cliq_fit.app.report.server.adapter.GoogleCliqFitReportServerAdapter;
+import com.cliq_fit.app.virtual_reality.CLiqFitBoxingParadise;
+import com.cliq_fit.app.virtual_reality.CliqFitParadiseWorkout;
 import com.cliq_fit.app.workout.Workout;
 import com.cliq_fit.app.workout.WorkoutFactory;
 import com.cliq_fit.app.workout.WorkoutType;
 import com.cliq_fit.thirdparty_lib.report.google_fit.GoogleFitReport;
+import com.cliq_fit.thirdparty_lib.virtual_reality.VRGlass;
+import com.patterns.pattern.bridge.audioplayer.MusicSourceCD;
+import com.patterns.pattern.bridge.audioplayer.MusicSourceMock;
+import com.patterns.pattern.bridge.audioplayer.initiallib.AudioPlayer;
 
 public class Main {
 
@@ -43,7 +49,8 @@ public class Main {
     }
 
     private static void goToVR() {
-        //Virtual reality workout: bridge pattern
+        VRGlass vrGlass = new VRGlass(new CliqFitParadiseWorkout(new CLiqFitBoxingParadise()));
+        vrGlass.enjoyFreedom();
     }
 
 }

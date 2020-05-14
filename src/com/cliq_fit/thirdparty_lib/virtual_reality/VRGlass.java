@@ -1,5 +1,7 @@
 package com.cliq_fit.thirdparty_lib.virtual_reality;
 
+import java.util.Arrays;
+
 public class VRGlass {
 
     private final ParadiseWorkout paradiseWorkout;
@@ -10,6 +12,8 @@ public class VRGlass {
 
     public void enjoyFreedom() {
         paradiseWorkout.lookAbove();
-        paradiseWorkout.howIsHere("@mentorcliq.com");
+        String[] whoIsHere = paradiseWorkout.howIsHere();
+
+        System.out.println(Arrays.toString(whoIsHere));
     }
 }

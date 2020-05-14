@@ -2,11 +2,11 @@ package com.cliq_fit.app.virtual_reality;
 
 import com.cliq_fit.thirdparty_lib.virtual_reality.ParadiseWorkout;
 
-public class ParadiseWorkoutMock implements ParadiseWorkout {
+public class CliqFitParadiseWorkout implements ParadiseWorkout {
 
     private final ParadiseWorkoutImplementor paradiseWorkoutImplementor;
 
-    public ParadiseWorkoutMock(ParadiseWorkoutImplementor paradiseWorkoutImplementor) {
+    public CliqFitParadiseWorkout(ParadiseWorkoutImplementor paradiseWorkoutImplementor) {
         this.paradiseWorkoutImplementor = paradiseWorkoutImplementor;
     }
 
@@ -16,7 +16,7 @@ public class ParadiseWorkoutMock implements ParadiseWorkout {
     }
 
     @Override
-    public String[] howIsHere(String search) {
-        return this.paradiseWorkoutImplementor.howIsHere(search);
+    public String[] howIsHere() {
+        return this.paradiseWorkoutImplementor.howIsHere();
     }
 }
