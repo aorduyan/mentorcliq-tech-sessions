@@ -14,7 +14,7 @@ public class FitConfig {
     private static volatile FitConfig instance;
 
     private FitConfig(WorkoutType favoriteWorkoutType) {
-        out.println("inside FitConfig constructor");
+        out.println("Load FirConfig for " + favoriteWorkoutType);
 
         this.favoriteWorkoutType = favoriteWorkoutType;
         this.userHeight = 180;//TODO get from mobile
@@ -23,7 +23,6 @@ public class FitConfig {
     }
 
     public static FitConfig getInstance(WorkoutType favoriteWorkoutType) {
-        out.println("inside FitConfig.getInstance");
         if (instance == null) {
             synchronized (FitConfig.class) {
                 if (instance == null) {
@@ -37,5 +36,17 @@ public class FitConfig {
 
     public WorkoutType getFavoriteWorkoutType() {
         return favoriteWorkoutType;
+    }
+
+    public double getUserHeight() {
+        return userHeight;
+    }
+
+    public int getUserWeight() {
+        return userWeight;
+    }
+
+    public int getUserAge() {
+        return userAge;
     }
 }
