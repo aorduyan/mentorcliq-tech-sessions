@@ -1,6 +1,6 @@
 package com.cliq_fit.app.workout.stage.warmup;
 
-public class WarmupStageAbs implements WarmupStage {
+public class WarmUpStageAbs implements WarmUpStage {
 
     @Override
     public void doOperation() {

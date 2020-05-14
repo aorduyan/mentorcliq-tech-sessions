@@ -4,7 +4,7 @@ import com.cliq_fit.app.workout.stage.exercise.*;
 import com.cliq_fit.app.workout.stage.stretch.*;
 import com.cliq_fit.app.workout.stage.warmup.*;
 
-class Workout {
+public class Workout {
 
     private WarmUpStage warmUpStage;
     private ExerciseStage exerciseStage;
@@ -19,39 +19,22 @@ class Workout {
     //please define members and stable behaviors
 
     //varying behaviors
-    public void warmUp() {
+    private void warmUp() {
         warmUpStage.doOperation();
     }
 
-    public void exercise() {
+    private void exercise() {
         exerciseStage.doOperation();
     }
 
-    public void stretch() {
+    private void stretch() {
         stretchStage.doOperation();
     }
 
-    public WarmUpStage getWarmUpStage() {
-        return warmUpStage;
+    public void doWorkout() {
+        warmUp();
+        exercise();
+        stretch();
     }
 
-    public void setWarmUpStage(WarmUpStage warmUpStage) {
-        this.warmUpStage = warmUpStage;
-    }
-
-    public ExerciseStage getExerciseStage() {
-        return exerciseStage;
-    }
-
-    public void setExerciseStage(ExerciseStage exerciseStage) {
-        this.exerciseStage = exerciseStage;
-    }
-
-    public StretchStage getStretchStage() {
-        return stretchStage;
-    }
-
-    public void setStretchStage(StretchStage stretchStage) {
-        this.stretchStage = stretchStage;
-    }
 }

@@ -1,25 +1,30 @@
 package com.cliq_fit;
 
+import com.cliq_fit.app.configuration.FitConfig;
 import com.cliq_fit.app.report.CliqFitReport;
 import com.cliq_fit.app.report.CliqFitReportClient;
 import com.cliq_fit.app.report.server.adapter.GoogleCliqFitReportServerAdapter;
+import com.cliq_fit.app.workout.Workout;
+import com.cliq_fit.app.workout.WorkoutFactory;
+import com.cliq_fit.app.workout.WorkoutType;
 import com.cliq_fit.thirdparty_lib.report.google_fit.GoogleFitReport;
 
 public class Main {
 
     public static void main(String[] args) {
-        loadConfiguration();
-        doWorkout();
+        FitConfig fitConfig = loadConfiguration();
+        doWorkout(fitConfig);
         showOffWithResults();
         goToVR();
     }
 
-    private static void loadConfiguration() {
-        //Load the config: singleton pattern
+    private static FitConfig loadConfiguration() {
+        return FitConfig.getInstance(WorkoutType.SWIMMING_CHAMPION);
     }
 
-    private static void doWorkout() {
-        //Do the workouts based on configuration preference (swimming/boxing/runing): strategy pattern
+    private static void doWorkout(FitConfig fitConfig) {
+        Workout workout = WorkoutFactory.buildWorkout(fitConfig.getFavoriteWorkoutType());
+        workout.doWorkout();
     }
 
     private static void showOffWithResults() {

@@ -1,6 +1,6 @@
 package com.cliq_fit.app.workout.stage.stretch;
 
-public class ExerciseStageLegs implements StretchStage {
+public class StretchStageLegs implements StretchStage {
 
     @Override
     public void doOperation() {
