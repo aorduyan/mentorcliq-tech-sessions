@@ -9,7 +9,7 @@ public class WorkoutFactory {
     public static Workout buildWorkout(WorkoutType workoutType) {
         switch (workoutType) {
             case SWIMMING_RELAX:
-                return new Workout(new WarmUpStageShoulder(), new ExerciseStageYoga(), new StretchStageLegs());
+                return new Workout(new WarmUpStageShoulder(), new ExerciseStageSwimming(), new StretchStageLegs());
             case SWIMMING_CHAMPION:
                 return new Workout(new WarmUpStageShoulder(), new ExerciseStageSwimmingAdvanced(), new StretchStageLegs());
             case BOXING:
