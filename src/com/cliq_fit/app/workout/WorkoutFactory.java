@@ -1,16 +1,7 @@
 package com.cliq_fit.app.workout;
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStageAbs.java;
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStageLegs.java;
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStageShoulder.java;
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStageSwimming.java;
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStageSwimmingAdvanced.java;
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStageYoga.java;
-import com.cliq_fit.app.workout.stage.stretch.StretchStageAbs.java;
-import com.cliq_fit.app.workout.stage.stretch.StretchStageLegs.java;
-import com.cliq_fit.app.workout.stage.stretch.StretchStageShoulder.java;
-import com.cliq_fit.app.workout.stage.warmup.WarmupStageAbs.java;
-import com.cliq_fit.app.workout.stage.warmup.WarmupStageLegs.java;
-import com.cliq_fit.app.workout.stage.warmup.WarmupStageShoulder.java;
+import com.cliq_fit.app.workout.stage.exercise*;
+import com.cliq_fit.app.workout.stage.stretch.*;
+import com.cliq_fit.app.workout.stage.warmup.*;
 
 public class WorkoutFactory {
 

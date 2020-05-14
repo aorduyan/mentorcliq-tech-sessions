@@ -1,8 +1,8 @@
 package com.cliq_fit.app.workout;
 
-import com.cliq_fit.app.workout.stage.exercise.ExerciseStage;
-import com.cliq_fit.app.workout.stage.stretch.StretchStage;
-import com.cliq_fit.app.workout.stage.warmup.WarmUpStage;
+import com.cliq_fit.app.workout.stage.exercise.*;
+import com.cliq_fit.app.workout.stage.stretch.*;
+import com.cliq_fit.app.workout.stage.warmup.*;
 
 class Workout {
 
