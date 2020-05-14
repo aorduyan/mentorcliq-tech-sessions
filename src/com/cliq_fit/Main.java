@@ -12,14 +12,18 @@ import com.cliq_fit.thirdparty_lib.report.google_fit.GoogleFitReport;
 public class Main {
 
     public static void main(String[] args) {
-        FitConfig fitConfig = loadConfiguration();
+        FitConfig fitConfig = loadConfiguration(WorkoutType.SWIMMING_CHAMPION);
         doWorkout(fitConfig);
+
+        fitConfig = loadConfiguration(WorkoutType.BOXING);
+        doWorkout(fitConfig);
+
         showOffWithResults();
         goToVR();
     }
 
-    private static FitConfig loadConfiguration() {
-        return FitConfig.getInstance(WorkoutType.SWIMMING_CHAMPION);
+    private static FitConfig loadConfiguration(WorkoutType workoutType) {
+        return FitConfig.getInstance(workoutType);
     }
 
     private static void doWorkout(FitConfig fitConfig) {

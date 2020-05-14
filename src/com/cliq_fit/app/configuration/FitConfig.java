@@ -2,6 +2,9 @@ package com.cliq_fit.app.configuration;
 
 import com.cliq_fit.app.workout.WorkoutType;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static java.lang.System.out;
 
 public class FitConfig {
@@ -9,9 +12,9 @@ public class FitConfig {
     private WorkoutType favoriteWorkoutType;
     private double userHeight;
     private int userWeight;
-    private int userAge;
+    private int userHeartRate;
 
-    private static volatile FitConfig instance;
+    private static volatile Map<WorkoutType, FitConfig> instances = new HashMap<>();
 
     private FitConfig(WorkoutType favoriteWorkoutType) {
         out.println("Load FirConfig for " + favoriteWorkoutType);
@@ -19,19 +22,20 @@ public class FitConfig {
         this.favoriteWorkoutType = favoriteWorkoutType;
         this.userHeight = 180;//TODO get from mobile
         this.userWeight = 80;//TODO get from mobile
-        this.userAge = 80;//TODO get from mobile
+        this.userHeartRate = 80;//TODO get from mobile
     }
 
     public static FitConfig getInstance(WorkoutType favoriteWorkoutType) {
-        if (instance == null) {
+        if (!instances.containsKey(favoriteWorkoutType)) {
             synchronized (FitConfig.class) {
-                if (instance == null) {
-                    instance = new FitConfig(favoriteWorkoutType);
+                if (!instances.containsKey(favoriteWorkoutType)) {
+                    FitConfig instance = new FitConfig(favoriteWorkoutType);
+                    instances.put(favoriteWorkoutType, instance);
                 }
             }
         }
 
-        return instance;
+        return instances.get(favoriteWorkoutType);
     }
 
     public WorkoutType getFavoriteWorkoutType() {
@@ -46,7 +50,7 @@ public class FitConfig {
         return userWeight;
     }
 
-    public int getUserAge() {
-        return userAge;
+    public int getUserHeartRate() {
+        return userHeartRate;
     }
 }
