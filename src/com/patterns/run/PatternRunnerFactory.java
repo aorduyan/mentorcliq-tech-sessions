@@ -6,6 +6,7 @@ import com.patterns.pattern.decorator.DecoratorRunner;
 import com.patterns.pattern.facade.FacadeRunner;
 import com.patterns.pattern.singleton.SingletonRunner;
 import com.patterns.pattern.strategy.StrategyRunner;
+import com.patterns.pattern.template_method.TemplateMethodRunner;
 
 public class PatternRunnerFactory {
 
@@ -23,6 +24,8 @@ public class PatternRunnerFactory {
                 return new FacadeRunner();
             case DECORATOR:
                 return new DecoratorRunner();
+            case TEMPLATE_METHOD:
+                return new TemplateMethodRunner();
             default:
                 throw new RuntimeException("Unknown pattern " + pattern);
         }
