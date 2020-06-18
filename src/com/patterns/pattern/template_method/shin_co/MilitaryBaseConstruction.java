@@ -5,27 +5,27 @@ import static java.lang.System.out;
 public class MilitaryBaseConstruction extends ShinCoConstruction {
 
     @Override
-    public void buildWalls() {
+    protected void buildWalls() {
         out.println("Building Military Base Walls;");
     }
 
     @Override
-    public void buildHeatingSystem() {
+    protected void buildHeatingSystem() {
         out.println("Building Military Base Heating System;");
     }
 
     @Override
-    public void buildCoolingSystem() {
+    protected void buildCoolingSystem() {
         out.println("Building Military Base Cooling System;");
     }
 
     @Override
-    public void installWindows() {
+    protected void installWindows() {
         //no windows here for security
     }
 
     @Override
-    public boolean needsWindows() {
+    protected boolean needsWindows() {
         return false;
     }
 }

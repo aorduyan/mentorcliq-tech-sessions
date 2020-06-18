@@ -5,22 +5,22 @@ import static java.lang.System.out;
 public class BusinessCenterConstruction extends ShinCoConstruction {
 
     @Override
-    public void buildWalls() {
+    protected void buildWalls() {
         out.println("Building Business Center Walls;");
     }
 
     @Override
-    public void buildHeatingSystem() {
+    protected void buildHeatingSystem() {
         out.println("Building Business Center Heating System;");
     }
 
     @Override
-    public void buildCoolingSystem() {
+    protected void buildCoolingSystem() {
         out.println("Building Business Center Cooling System;");
     }
 
     @Override
-    public void installWindows() {
+    protected void installWindows() {
         out.println("Installing Business Center Windows;");
     }
 }

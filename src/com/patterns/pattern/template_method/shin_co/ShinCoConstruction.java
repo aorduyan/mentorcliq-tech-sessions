@@ -4,7 +4,7 @@ import static java.lang.System.out;
 
 public abstract class ShinCoConstruction {
 
-    public void doConstruction() {
+    public final void doConstruction() {
         buildParkingArea();
         buildSewageSystem();
         buildWalls();
@@ -16,25 +16,25 @@ public abstract class ShinCoConstruction {
         buildCustomStuff();
     }
 
-    public final void buildParkingArea() {
+    private void buildParkingArea() {
         out.println("Building Parking Area");
     }
 
-    public final void buildSewageSystem() {
+    private void buildSewageSystem() {
         out.println("Building Sewage System");
     }
 
-    public boolean needsWindows() {
+    protected boolean needsWindows() {
         return true;
     }
 
-    public void buildCustomStuff() {
+    protected void buildCustomStuff() {
         //do nothing, leave for concrete constructions to implement, now or in the future
     }
 
-    public abstract void buildWalls();
-    public abstract void buildHeatingSystem();
-    public abstract void buildCoolingSystem();
-    public abstract void installWindows();
+    protected abstract void buildWalls();
+    protected abstract void buildHeatingSystem();
+    protected abstract void buildCoolingSystem();
+    protected abstract void installWindows();
 
 }
